@@ -27,7 +27,7 @@ def controleVelocidade():
     
 janela = Tk()
 janela.title('Dinâmica dos Trêns (Client)')
-janela.geometry('1200x1200')
+janela.geometry('1200x400')
 
 widget = Canvas(janela, width=1000, height=1000)
 widget.pack()
@@ -46,11 +46,11 @@ e4.insert(0, 'Trem Azul')
 
 b = Button(0, text="submit", command=controleVelocidade)
 
-widget.create_window(20, 460, window=e1)
-widget.create_window(20, 500, window=e2)
-widget.create_window(20, 540, window=e3)
-widget.create_window(20, 580, window=e4)
-widget.create_window(20, 620, window=b)
+widget.create_window(20, 60, window=e1)
+widget.create_window(20, 100, window=e2)
+widget.create_window(20, 140, window=e3)
+widget.create_window(20, 180, window=e4)
+widget.create_window(20, 220, window=b)
 
 #t5 = threading.Thread(target=controleVelocidade, args=[janela, widget])
 #t5.start()
