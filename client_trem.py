@@ -26,7 +26,7 @@ def controleVelocidade():
     conexao.sendto(message.encode('utf-8'), (HOST, PORT))
     
 janela = Tk()
-janela.title('Gerenciador de Processos')
+janela.title('Dinâmica dos Trêns (Client)')
 janela.geometry('1200x1200')
 
 widget = Canvas(janela, width=1000, height=1000)

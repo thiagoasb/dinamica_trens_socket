@@ -202,6 +202,7 @@ def velocidades_cliente(janela, canvas):
     
     print('Na thread')
     while True:
+        # Quantidadde de dados que o server espera receber
         data, adress = server.recvfrom(1024)
         print(data)
         n1 = float(data.split()[0])
@@ -209,16 +210,19 @@ def velocidades_cliente(janela, canvas):
         n3 = float(data.split()[2])
         n4 = float(data.split()[3])
     
+# Nome da máquina que está executando o arquivo
 HOST = 'localhost'
+# Porta 
 PORT = 5000
 
-#UDP
+#Objeto socket, AF_INIET (família do endereço)
 server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+# Vincula o socket ao port number
 server.bind((HOST, PORT))
 print('Server Started')
 
 janela = Tk()
-janela.title('Gerenciador de Processos')
+janela.title('Dinâmica dos Trêns (Server)')
 janela.geometry('1200x1200')
 
 widget = Canvas(janela, width=1000, height=1000)
